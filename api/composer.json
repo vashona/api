@@ -1,0 +1,23 @@
+{
+    "name": "vashona/api",
+    "description": "VaShona API",
+    "type": "library",
+    "homepage": "http://vashona.com/pages/apps.html",
+    "require": {
+        "php": ">=5.5",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "vashona\\api\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "victor",
+            "email": "victor@vashona.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
