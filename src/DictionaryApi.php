@@ -58,14 +58,15 @@ class DictionaryApi
     }
 
     /**
+     * @param int $limit
      * @return mixed
      */
-    public function lastUpdated()
+    public function lastUpdated($limit = 10)
     {
         $parameters = [
             'format'   => 'json',
             'ordering' => '-date_modified',
-            'limit'    => 1,
+            'limit'    => $limit,
         ];
         $client     = new GuzzleHttp\Client(['http_errors' => false]);
         $response   = $client->request('GET', $this->serverUrl['default'], [
