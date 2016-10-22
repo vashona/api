@@ -18,3 +18,13 @@ It is recommended that you install via composer.
 ```sh
 $ composer require vashona/api
 ```
+#### API
+```sh
+https://api.vashona.com/api1/translator/?x=child&to=sna&from=en&format=json
+
+# This translates 'child' from 'en' to 'sna'.
+
+https://api.vashona.com/api1/translator/?x=mwana&to=en&from=sna&format=json
+
+# This translates 'mwana' from 'sna' to 'en'.
+```
