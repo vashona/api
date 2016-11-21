@@ -5,11 +5,10 @@ namespace vashona\api;
 use GuzzleHttp;
 
 /**
- * Class ProverbApi
+ * Class PhraseApi
  * @package vashona\api
- * @deprecated
  */
-class ProverbApi
+class PhraseApi
 {
     /**
      *
@@ -23,8 +22,11 @@ class ProverbApi
      */
     protected $serverUrl;
 
-
-    public function getDailyProverb()
+    /**
+     * Get daily phrase
+     * @return mixed
+     */
+    public function getDaily()
     {
         $client   = new GuzzleHttp\Client(['http_errors' => false]);
         $response = $client->request('GET', $this->serverUrl, [
