@@ -19,12 +19,16 @@ It is recommended that you install via composer.
 $ composer require vashona/api
 ```
 #### API
-```sh
-https://api.vashona.com/api1/translator/?x=child&to=sna&from=en&format=json
+```php
 
-# This translates 'child' from 'en' to 'sna'.
 
-https://api.vashona.com/api1/translator/?x=mwana&to=en&from=sna&format=json
+# Translate 'child' from 'English' to 'Shona'.
 
-# This translates 'mwana' from 'sna' to 'en'.
+use vashona\api\TranslatorApi;
+
+$TranslatorApi = new TranslatorApi ();
+$TranslatorApi->setServerUrl('https://api.vashona.com/api1/translator/');
+$TranslatorApi->setAuth('Username', 'password');
+$json = $TranslatorApi->getTranslation('child', 'sna', 'en');
+
 ```

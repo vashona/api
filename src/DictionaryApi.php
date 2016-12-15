@@ -96,8 +96,9 @@ class DictionaryApi
     public function getWord($str)
     {
         $parameters = [
-            'format'                                                 => 'json',
-            'lexicon_attributes__lexicon_english_translations__word' => $str,
+            'format'                                        => 'json',
+            'lexicon_attributes__lexicon_definitions__word' => $str,
+            'language_id'                                   => 'en',
         ];
         $client     = new GuzzleHttp\Client(['http_errors' => false]);
         $response   = $client->request('GET', $this->serverUrl['default'], [
