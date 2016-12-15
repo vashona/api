@@ -21,8 +21,7 @@ $ composer require vashona/api
 #### API
 ```php
 
-
-# Translate 'child' from 'English' to 'Shona'.
+// Translate 'child' from 'English' to 'Shona'.
 
 use vashona\api\TranslatorApi;
 
