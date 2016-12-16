@@ -47,7 +47,7 @@ class DictionaryApi
             'izwi'   => $str,
         ];
 
-        $client   = new GuzzleHttp\Client(['http_errors' => false]);
+        $client   = new GuzzleHttp\Client(['verify' => false]);
         $response = $client->request('GET', $this->serverUrl['default'], [
             'auth'  => $this->credentials['auth'],
             'query' => $parameters,
@@ -68,7 +68,7 @@ class DictionaryApi
             'ordering' => '-date_modified',
             'limit'    => $limit,
         ];
-        $client     = new GuzzleHttp\Client(['http_errors' => false]);
+        $client     = new GuzzleHttp\Client(['verify' => false]);
         $response   = $client->request('GET', $this->serverUrl['default'], [
             'auth'  => $this->credentials['auth'],
             'query' => $parameters,
@@ -100,7 +100,7 @@ class DictionaryApi
             'lexicon_attributes__lexicon_definitions__word' => $str,
             'language_id'                                   => 'en',
         ];
-        $client     = new GuzzleHttp\Client(['http_errors' => false]);
+        $client     = new GuzzleHttp\Client(['verify' => false]);
         $response   = $client->request('GET', $this->serverUrl['default'], [
             'auth'  => $this->credentials['auth'],
             'query' => $parameters,
@@ -131,7 +131,7 @@ class DictionaryApi
             'format' => 'json',
             'search' => $str,
         ];
-        $client     = new GuzzleHttp\Client(['http_errors' => false]);
+        $client     = new GuzzleHttp\Client(['verify' => false]);
         $response   = $client->request('GET', $this->serverUrl['default'], [
             'auth'  => $this->credentials['auth'],
             'query' => $parameters,
@@ -149,7 +149,7 @@ class DictionaryApi
         $parameters = [
             'format' => 'json',
         ];
-        $client     = new GuzzleHttp\Client(['http_errors' => false]);
+        $client     = new GuzzleHttp\Client(['verify' => false]);
         $response   = $client->request('GET', $this->serverUrl['random'], [
             'auth'  => $this->credentials['auth'],
             'query' => $parameters,
@@ -173,7 +173,7 @@ class DictionaryApi
             'language' => $language,
             'limit'    => $limit,
         ];
-        $client     = new GuzzleHttp\Client(['http_errors' => false]);
+        $client     = new GuzzleHttp\Client(['verify' => false]);
         $response   = $client->request('GET', $this->serverUrl['suggestWord'], [
             'auth'  => $this->credentials['auth'],
             'query' => $parameters,
@@ -195,7 +195,7 @@ class DictionaryApi
             'query'    => $str,
             'language' => $language,
         ];
-        $client     = new GuzzleHttp\Client(['http_errors' => false]);
+        $client     = new GuzzleHttp\Client(['verify' => false]);
         $response   = $client->request('GET', $this->serverUrl['suggestSpelling'], [
             'auth'  => $this->credentials['auth'],
             'query' => $parameters,
@@ -213,7 +213,7 @@ class DictionaryApi
         $parameters = [
             'format' => 'json',
         ];
-        $client     = new GuzzleHttp\Client(['http_errors' => false]);
+        $client     = new GuzzleHttp\Client(['verify' => false]);
         $response   = $client->request('GET', $this->serverUrl['wordOfTheDay'], [
             'auth'  => $this->credentials['auth'],
             'query' => $parameters,

@@ -38,7 +38,7 @@ class TranslatorApi
             'to'     => $to,
             'from'   => $from,
         ];
-        $client     = new GuzzleHttp\Client(['http_errors' => false]);
+        $client     = new GuzzleHttp\Client(['verify' => false]);
         $response   = $client->request('GET', $this->serverUrl, [
             'auth'  => $this->credentials['auth'],
             'query' => $parameters,

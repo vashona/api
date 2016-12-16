@@ -33,7 +33,7 @@ class PageApi
             'slug' => $slug,
         ];
 
-        $client     = new GuzzleHttp\Client(['http_errors' => false]);
+        $client     = new GuzzleHttp\Client(['verify' => false]);
         $response   = $client->request('GET', $this->serverUrl, [
             'auth'  => $this->credentials['auth'],
             'query' => $parameters,

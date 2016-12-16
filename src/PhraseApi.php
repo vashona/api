@@ -28,7 +28,7 @@ class PhraseApi
      */
     public function getDaily()
     {
-        $client   = new GuzzleHttp\Client(['http_errors' => false]);
+        $client   = new GuzzleHttp\Client(['verify' => false, 'verify' => false]);
         $response = $client->request('GET', $this->serverUrl, [
             'auth'  => $this->credentials['auth'],
             'query' => ['format' => 'json'],

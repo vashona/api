@@ -26,7 +26,7 @@ class ProverbApi
 
     public function getDailyProverb()
     {
-        $client   = new GuzzleHttp\Client(['http_errors' => false]);
+        $client   = new GuzzleHttp\Client(['verify' => false]);
         $response = $client->request('GET', $this->serverUrl, [
             'auth'  => $this->credentials['auth'],
             'query' => ['format' => 'json'],

@@ -35,7 +35,7 @@ class PopularLexiconApi
             'limit'  => $limit,
             'offset' => $offset,
         ];
-        $client     = new GuzzleHttp\Client(['http_errors' => false]);
+        $client     = new GuzzleHttp\Client(['verify' => false]);
         $response   = $client->request('GET', $this->serverUrl, [
             'auth'  => $this->credentials['auth'],
             'query' => $parameters,
@@ -56,7 +56,7 @@ class PopularLexiconApi
             'format' => 'json',
             'izwi'   => $izwi,
         ];
-        $client     = new GuzzleHttp\Client(['http_errors' => false]);
+        $client     = new GuzzleHttp\Client(['verify' => false]);
         $response   = $client->request('GET', $this->serverUrl, [
             'auth'  => $this->credentials['auth'],
             'query' => $parameters,
